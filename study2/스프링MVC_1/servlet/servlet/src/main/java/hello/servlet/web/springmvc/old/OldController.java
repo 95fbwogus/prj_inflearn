@@ -13,6 +13,7 @@ public class OldController implements Controller {
     @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         System.out.println("OldController started");
+        System.out.println("커밋 테스트용입니다.");
         return new ModelAndView("new-form");
     }
 }
