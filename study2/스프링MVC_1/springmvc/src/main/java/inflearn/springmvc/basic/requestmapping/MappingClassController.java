@@ -1,9 +1,11 @@
 package inflearn.springmvc.basic.requestmapping;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-//@RequestMapping("/mapping")
+@Slf4j
+@RequestMapping("/mappin/users")
 public class MappingClassController {
     /**
      * 회원 관리 API
@@ -13,28 +15,28 @@ public class MappingClassController {
      * 회원 수정: PATCH /users/{userId}
      * 회원 삭제: DELETE /users/{userId}
      */
-    @GetMapping("/mapping/users2")
+    @GetMapping
     public String user() {
         return "get users";
     }
 
-    @PostMapping("/mapping/users")
+    @PostMapping
     public String addUser() {
         return "post user";
     }
 
-    @GetMapping("/mapping/users/{userId}")
-    public String findUser(@PathVariable String userId) {
+    @GetMapping("/{userId}")
+    public String findUser(@PathVariable("userId") String userId) {
         return "get userId=" + userId;
     }
 
-    @PatchMapping ("/mapping/users/{userId}")
-    public String updateUser(@PathVariable String userId) {
+    @PatchMapping ("/{userId}")
+    public String updateUser(@PathVariable("userId") String userId) {
         return "update userId=" + userId;
     }
 
-    @DeleteMapping("/mapping/users/{userId}")
-    public String deleteUser(@PathVariable String userId) {
+    @DeleteMapping("/{userId}")
+    public String deleteUser(@PathVariable("userId") String userId) {
         return "delete userId=" + userId;
     }
 
