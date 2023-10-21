@@ -1,0 +1,43 @@
+logging:
+  level:
+    com.siloam.* : debug
+
+spring:
+  application:
+    name: "siloam"
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: none
+      # entity를 camelCase로 작성 시, db에는 snake_case로 컬럼명이 들어가는데, 이를 막으려면 아래 주석을 해제해야 함
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      '[hibernate.format_sql]': true
+      hibernate:
+        # 실행되는 SQL을 보기 좋은 포맷으로 보여줌
+        show_sql: true
+        format_sql: true
+        use_sql_comments: true
+        hbm2ddl:
+          auto: none
+        # 방언 설정
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        # 10개만큼 모아서 한번에 DB에 저장.
+        jdbc:
+          batch_size: 10
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect 바로 위의 방언 설정이랑 똑같음
+  datasource:
+    # DB 접근 정보
+    url: 'jdbc:postgresql://localhost:5432/siloam'
+    username: 'postgres'
+    password: 'Fb3479wo@!'
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 5000
+      #사용할 스키마
+      schema: SLDBA
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
