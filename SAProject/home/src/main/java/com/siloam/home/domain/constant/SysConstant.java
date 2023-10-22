@@ -1,13 +1,9 @@
-package com.siloam.home.domain.Constant;
+package com.siloam.home.domain.constant;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 
 /**
  * 시스템 상수

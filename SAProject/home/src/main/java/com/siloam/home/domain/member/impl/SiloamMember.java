@@ -1,13 +1,12 @@
 package com.siloam.home.domain.member.impl;
 
-import com.siloam.home.domain.Constant.RoleType;
+import com.siloam.home.domain.constant.RoleType;
 import com.siloam.home.domain.member.Member;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
 
 @Entity
 @Getter

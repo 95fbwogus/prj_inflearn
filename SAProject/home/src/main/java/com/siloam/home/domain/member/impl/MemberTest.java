@@ -1,7 +1,7 @@
 package com.siloam.home.domain.member.impl;
 
-import com.siloam.home.domain.Constant.RoleType;
-import com.siloam.home.domain.Constant.SysConstant;
+import com.siloam.home.domain.constant.RoleType;
+import com.siloam.home.domain.constant.SysConstant;
 import lombok.Getter;
 import lombok.Setter;
 

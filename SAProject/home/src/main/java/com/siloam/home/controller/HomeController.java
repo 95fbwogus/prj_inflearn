@@ -1,7 +1,6 @@
 package com.siloam.home.controller;
 
-import com.siloam.home.domain.Constant.SysConstant;
-import com.siloam.home.domain.member.Member;
+import com.siloam.home.domain.constant.SysConstant;
 import com.siloam.home.domain.member.impl.MemberTest;
 import com.siloam.home.domain.member.impl.SiloamMember;
 import com.siloam.home.repository.member.MemberRepository;
@@ -19,9 +18,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller
