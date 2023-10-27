@@ -57,7 +57,7 @@ public class HomeController {
 
         // em.remove(m) 해버리면 java.lang.IllegalArgumentException: Removing a detached instance com.siloam.home.domain.member.impl.SiloamMember#0000000000 오류남..
         //members.forEach(m -> em.remove(m));
-        members.forEach(m -> em.remove(em.contains(m) ? m : em.merge(m)));
+//        members.forEach(m -> em.remove(em.contains(m) ? m : em.merge(m)));
         log.debug("=================== Persist Start ===================");
         members.forEach(m -> em.persist(m));
         log.debug("=================== Persist End ===================");

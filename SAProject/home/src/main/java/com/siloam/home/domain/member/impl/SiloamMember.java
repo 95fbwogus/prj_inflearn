@@ -11,7 +11,7 @@ import java.sql.Timestamp;
 @Entity
 @Getter
 @Setter
-@Table(name = "tb_user01m01")
+@Table(name = "tb_usermaster")
 public class SiloamMember implements Member {
 
     @Id
