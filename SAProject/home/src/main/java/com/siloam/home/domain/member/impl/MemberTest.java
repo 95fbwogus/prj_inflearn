@@ -19,6 +19,7 @@ public class MemberTest {
         for(int i = 0 ; i < 1000; i++) {
             SiloamMember member = new SiloamMember();
             String testId = String.format("%010d", i);
+            String test = "test";
 
             member.setUserCode(testId);
             member.setUserId("fbwogus_" + i);
